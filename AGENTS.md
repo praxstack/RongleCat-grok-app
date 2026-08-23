@@ -45,3 +45,19 @@
 6. **Branch hygiene** — after work lands on `main` (merge, squash, or batch integrate), promptly and safely delete finished remote/local branches and idle worktrees. Confirm with `git fetch --prune`, ancestor / `gh pr` / feature-on-main checks; never delete open-PR heads, unique WIP, or worktree-checked-out branches without removing the worktree first. Details: [docs/llm-wiki/maintain.md](docs/llm-wiki/maintain.md#branch-hygiene-merged--finished-work).
 
 7. **App.tsx growth freeze** — do **not** add new `useState` / large feature blocks to `src/App.tsx`. New product state and UI must land in domain modules (`src/providers/`, `src/hooks/`, `src/components/`, `src/lib/`). During code-quality remediation App line count may only decrease relative to the WP start baseline (see `docs/plans/CODE-QUALITY-PROGRESS.md`).
+
+## Agent skills
+
+### Issue tracker
+
+GitHub issues on `praxstack/RongleCat-grok-app`, mirrored as markdown under `.scratch/<feature>/issues/`. Upstream intake for public PRs is still `RongleCat/grok-app`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Matt Pocock roles plus this repo's maintain labels (`enhancement`/`bug`, `priority:p0|p1|p2`, `area:*`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context. Product rules in `docs/llm-wiki/`. See `docs/agents/domain.md`.
+
+gstack routing lives in `CLAUDE.md`. pstack model map: `docs/agents/pstack.md` and `~/.config/pstack/models.md`.
